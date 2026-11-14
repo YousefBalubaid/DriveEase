@@ -1,0 +1,9 @@
+// External JavaScript: input validation and an interactive rental estimate.
+'use strict';
+function showMessage(form, message, isError=false){const output=form.querySelector('[role="status"]');output.textContent=message;output.className='notice'+(isError?' error':'');}
+document.addEventListener('DOMContentLoaded',()=>{
+ const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();
+ const estimate=document.querySelector('#estimate-form');if(estimate){estimate.addEventListener('submit',e=>{e.preventDefault();const daily=Number(estimate.elements.vehicle.value),days=Number(estimate.elements.days.value);if(!Number.isInteger(days)||days<1||days>30){showMessage(estimate,'Enter a rental period between 1 and 30 days.',true);return;}showMessage(estimate,`Estimated rental cost: SAR ${(daily*days).toLocaleString('en-US')} for ${days} day(s). This is a sample estimate, not a booking.`);});}
+ const signup=document.querySelector('#signup-form');if(signup){signup.addEventListener('submit',e=>{e.preventDefault();if(!signup.reportValidity())return;const password=signup.elements.password.value;if(password.length<8){showMessage(signup,'Password must be at least 8 characters.',true);return;}if(password!==signup.elements.confirm.value){showMessage(signup,'Passwords do not match.',true);return;}showMessage(signup,'Demo registration validated successfully. No account was created or information stored.');signup.reset();});}
+ const login=document.querySelector('#login-form');if(login){login.addEventListener('submit',e=>{e.preventDefault();if(!login.reportValidity())return;showMessage(login,'Demo login form submitted. Authentication requires a backend and is not enabled.');login.reset();});}
+});
