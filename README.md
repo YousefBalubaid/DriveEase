@@ -1,14 +1,25 @@
-# DriveEase — CPIS 358 Static Website
+# DriveEase – CPIS 358 Assignment 2
 
-Open `index.html` in a browser. Includes four HTML pages, a shared external CSS stylesheet, internal CSS on About Us, inline CSS on Home, an external JavaScript file, HTML image maps, inter-page links, in-page anchors, lists, tables, forms, and CSS layering with `z-index`.
+A static educational car rental website continuing Assignment 1.
 
-## Important
-This is a front-end demonstration. Login and sign-up do not create accounts or store passwords. Rates are illustrative.
+## Open locally
+Open `index.html` in a modern browser. No build tools or server are required.
 
-## Publish with GitHub Pages
-1. Create a GitHub repository and invite your group members.
-2. Commit and push all files, keeping `index.html` at repository root.
-3. Open Settings → Pages → Deploy from a branch → `main` / `(root)` → Save.
-4. Wait for the public URL and test the pages.
-5. Invite `sarafat@kau.edu.sa` to the repository, as required by the assignment.
-6. Each student should make genuine commits; capture their GitHub contribution calendar and add it to the report.
+## Features
+- Four linked pages, responsive layout, image maps, table, lists, internal anchors
+- Inline, internal, and external CSS; classes, shadows, borders, z-index
+- External JavaScript for dynamically generated fleet cards, interactive text/style, rental estimator, and login/signup validation
+- Embedded CSS and inline CSS for coursework requirements
+
+## Demonstration tests
+- Economy for 3 days = SAR 360
+- Invalid email or short password gives validation errors
+- Signup requires name, valid email, Saudi-format phone, password 8+ chars including uppercase and digit, matching confirmation
+- Changing featured car changes description and SUV highlights the panel
+- Theme button changes background color
+
+**Note:** No real bookings, logins, account creation, or data storage. Sample prices only.
+
+## GitHub
+Existing project: https://github.com/YousefBalubaid/DriveEase
+Each group member should commit and push their actual changes, and capture their own contribution calendar. Do not claim commits that did not occur.
